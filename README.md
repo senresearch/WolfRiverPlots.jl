@@ -1,6 +1,4 @@
-# WolfRiverPlots.jl
-
-*Statistical plotting recipes for QTL analysis.*
+# WolfRiverPlots.jl: A collection of plotting recipies for statistical analyses
 
 [![CI](https://github.com/senresearch/WolfRiverPlots.jl/actions/workflows/ci.yml/badge.svg)](https://github.com/senresearch/WolfRiverPlots.jl/actions/workflows/ci.yml)
 [![Coverage](https://codecov.io/gh/senresearch/WolfRiverPlots.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/senresearch/WolfRiverPlots.jl)
@@ -8,9 +6,11 @@
 `WolfRiverPlots.jl` is a versatile plotting package built in the Julia programming language. The package consists of specific plotting recipes, designed to streamline data visualization and enhance the process of statistical analysis.
 
 ## Features
-Here are the main functions provided by WolfRiverPlots.jl:
+Currently we offer one function, and we will add more with time.
 
-- `confidenceplot()`: This function is designed to create vertical confidence plots. These plots provide an insightful representation of statistical certainty or variability in the data.
+- `confidenceplot()`: This function is designed to create vertical
+  confidence plots. These plots can be used to visualize regression
+  coefficients and their confidence intervals visually.
 
 
 ## Installation

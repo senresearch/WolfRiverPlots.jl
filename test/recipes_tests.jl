@@ -3,9 +3,7 @@
 ########
 
 x = randn(7)
-
-y = repeat([""], 7)
-y = map(x -> randstring('A':'Z', 2), y)
+y = ["NA","DO", "ZC", "UX", "MK", "XQ", "YN"]
 
 ε = rand(Uniform(0.1,2), 7)
 

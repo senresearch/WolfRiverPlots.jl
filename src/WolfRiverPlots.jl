@@ -8,19 +8,11 @@ module WolfRiverPlots
     # export sortnatural, pseudoticks,calcKinship2
     
 
-    # qtl functions
+    # confidence functions
     include("./confidence/confidence_recipe.jl");
     export confidenceplot, ConfidencePlot   
 
-    # include("./qtl/qtl_helpers.jl");
-    # export plot_QTL, plot_QTL!, get_plot_QTL_inputs
+    include("./confidence/plot_confidence.jl");
+    export plot_confidence, plot_confidence!
     
-    
-    # # eqtl functions 
-    # include("./eqtl/eqtl_recipe.jl");
-    # export eqtlplot, EQTLPlot   
-
-    # include("./eqtl/eqtl_helpers.jl");
-    # export plot_eQTL
-
 end # module WolfRiverPlots

@@ -1,8 +1,9 @@
 using WolfRiverPlots
+using Random, Distributions
 using Plots
 using Test
 ENV["GKSwstype"] = "nul"
 
-@tesWolft "BiverQTLPlots.jl" begin
+@testset "WolfRiverPlots.jl" begin
     include("recipes_tests.jl")
 end

@@ -10,7 +10,7 @@
 ## Features
 Here are the main functions provided by WolfRiverPlots.jl:
 
-- `confidenceplot()`: todo
+- `confidenceplot()`: This function is designed to create vertical confidence plots. These plots provide an insightful representation of statistical certainty or variability in the data.
 
 
 ## Installation
@@ -28,20 +28,13 @@ After installing `WolfRiverPlots.jl`, you can include it in your Julia script us
 using WolfRiverPlots
 ```
 
-From there, you can start using `plot_QTL` and `plot_eQTL` to plot your data. For example:
+- Confidence plots:
 
 ```julia
-# Assuming `single_results_perms` are restulting lod scores
-# gInfo contains genotype information  
-plot_QTL(single_results_perms, gInfo)
+# ε contains variation relative to x-estimates  
+plot_confidence(x, y, ε)
 ```
-```julia
-# Assuming `lod_scores` are in multipletraits_results
-# pInfo contains phenotype information
-# gInfo contains genotype information  
-# thresh is your LOD threshold value
-plot_eQTL(multipletraits_results, pInfo, gInfo; threshold = 5.0)
-```
+
 ## Examples
 The following examples provide a basic idea of how to use the functions provided by `WolfRiverPlots.jl`. Before proceeding, ensure that you've installed `WolfRiverPlots.jl` and imported it into your Julia script using `using WolfRiverPlots` along with `Plots.jl`.
 
@@ -49,24 +42,28 @@ The following examples provide a basic idea of how to use the functions provided
 ```julia
 using WolfRiverPlots
 using Distributions, Random
-using Plots#, ColorSchemes
-# using Helium
+using Plots
 
 ########
 # Data #
 ########
+
+Random.seed!(1203)
 
 x = randn(7)
 
 y = repeat([""], 7)
 y = map(x -> randstring('A':'Z', 2), y)
 
-ε = rand(Uniform(0.1,2), 7)
+ε = rand(Uniform(0.1,0.25), 7)
 
 ########
 # Plot #
 ########
-confidenceplot(x, y, ε)
+plot_confidence(x, y, ε,
+    title = "Confidence Plot\n",
+    xlabel = "Effect Size",
+    ylabel = "Variables")
 ```
 
 ![alt QTL](images/confidence_example.svg)

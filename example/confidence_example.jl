@@ -22,5 +22,4 @@ plot_confidence(x, y, ε,
     title = "Confidence Plot\n",
     xlabel = "Effect Size",
     ylabel = "Variables")
-savefig(joinpath(@__DIR__, "..", "images", "confidence_example.png"))
 savefig(joinpath(@__DIR__, "..", "images", "confidence_example.svg"))
